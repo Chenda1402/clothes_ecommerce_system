@@ -2,7 +2,7 @@
   <div class="women-collection-page font-kantumruy bg-white text-gray-800 min-h-screen">
     <!-- Header Bar -->
     <header class="header-bar sticky top-0 left-0 w-full bg-white shadow-md z-40">
-      <div class="bg-pink-700 h-4"></div> 
+      <div class="bg-pink-700 h-4"></div>
       <div class="container mx-auto px-4 py-3 flex items-center justify-between">
         <nav class="bar-menu-parent flex items-center space-x-2 md:space-x-4">
           <a href="#" class="bar-menu px-3 py-2 rounded-md text-pink-700 hover:bg-pink-50 font-semibold">Women</a>
@@ -235,10 +235,10 @@ import { ref, markRaw, defineAsyncComponent } from 'vue';
 
 // Data for Products
 const products = ref([
-  { id: 1, name: 'Knitting Button Short Tops Tees Patchwork Y2k Shirt', price: '$13.50', image: 'https://via.placeholder.com/358x461/FFE4E1/000000?Text=Product+1' },
-  { id: 2, name: 'Elegant Summer Dress Floral Pattern Light Fabric', price: '$22.00', image: 'https://via.placeholder.com/358x461/E0FFFF/000000?Text=Product+2' },
-  { id: 3, name: 'Casual Denim Jacket with Vintage Wash Details', price: '$35.90', image: 'https://via.placeholder.com/358x461/FFF0F5/000000?Text=Product+3' },
-  { id: 4, name: 'High-Waisted Skinny Jeans Stretch Fabric', price: '$29.99', image: 'https://via.placeholder.com/358x461/F0FFF0/000000?Text=Product+4' },
+  { id: 1, name: 'Knitting Button Short Tops Tees Patchwork Y2k Shirt', price: '$13.50', image: '/public/images/home.jpg' },
+  { id: 2, name: 'Elegant Summer Dress Floral Pattern Light Fabric', price: '$22.00', image: '/public/images/frame-79.png' },
+  { id: 3, name: 'Casual Denim Jacket with Vintage Wash Details', price: '$35.90', image: '/public/images/frame-1171276670.png' },
+  { id: 4, name: 'High-Waisted Skinny Jeans Stretch Fabric', price: '$29.99', image: '/public/images/frame-1171276670.png' },
   { id: 5, name: 'Cozy Knit Sweater Soft Wool Blend Oversized', price: '$45.00', image: 'https://via.placeholder.com/358x461/F5F5DC/000000?Text=Product+5' },
   { id: 6, name: 'Striped Long Sleeve T-Shirt Cotton Comfortable', price: '$18.75', image: 'https://via.placeholder.com/358x461/FAFAD2/000000?Text=Product+6' },
   { id: 7, name: 'Sporty Athleisure Hoodie with Drawstring', price: '$33.20', image: 'https://via.placeholder.com/358x461/DCDCDC/000000?Text=Product+7' },
@@ -304,29 +304,24 @@ const scrollToTop = () => {
 </script>
 
 <style scoped>
+/* Add any specific styles here that are hard to achieve with Tailwind or for overrides */
+/* For example, custom scrollbar for the filter popup if needed */
 .filter1::-webkit-scrollbar {
   width: 6px;
 }
 .filter1::-webkit-scrollbar-track {
-  background: #f1f1f1; /* neutral-white might be too bright for a track */
+  background: #f1f1f1;
 }
 .filter1::-webkit-scrollbar-thumb {
-  background: #E19EAD; /* Example scrollbar thumb color related to primary-dark */
+  background: #fda4af; /* A pinkish color, adjust to your theme */
   border-radius: 3px;
 }
 .filter1::-webkit-scrollbar-thumb:hover {
-  background: #C77489; 
+  background: #f472b6; /* Darker pink on hover */
 }
 
-/* Ensures Kantumruy font is applied if not globally set via tailwind.config.js or main.css */
+/* Ensure Kantumruy font is applied if not globally set via tailwind.config.js */
 .font-kantumruy {
   font-family: 'Kantumruy', sans-serif;
-}
-
-.popup-overlay { /* This is also handled by Tailwind fixed inset-0 classes */
-    display: flex;
-    flex-direction: column;
-    /* position: fixed;
-    inset: 0; */ /* These are redundant if using Tailwind's fixed inset-0 */
 }
 </style>

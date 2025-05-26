@@ -1,4 +1,8 @@
 <template>
+  
+
+
+
   <!-- Navigation Bar Component -->
   <nav class="bg-white border-gray-200 dark:bg-gray-900">
     <div
@@ -155,6 +159,14 @@
               >Hello</router-link
             >
           </li>
+            <li>
+            <router-link
+              to="/catory"
+              class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700"
+              active-class="md:text-blue-700 md:dark:text-blue-500"
+              >Categort</router-link
+            >
+          </li>
         </ul>
       </div>
     </div>
@@ -169,6 +181,7 @@
 </template>
 
 <script setup>
+// import Checkout from './components/Checkout.vue';
 // Import RouterView if you need type hints or specific logic,
 // but it's usually automatically available globally when vue-router is installed.
 // import { RouterView } from 'vue-router';
@@ -186,3 +199,4 @@
 /* font-weight: bold; */
 /* } */
 </style>
+

@@ -2,10 +2,8 @@ import { createRouter, createWebHistory } from 'vue-router';
 import Home from '../views/Home.vue';
 import About from '../views/About.vue';
 import HelloWorld from '../../components/HelloWorld.vue';
-import Women from '../Layout/Women.vue';
-import Men from '../Layout/Men.vue';
-import category from '../Layout/category.vue';
-import Category from '../Layout/category.vue';
+import Category from '../views/Category/Category.vue';
+
 // import Login from '../views/Login.vue';
 
 const router = createRouter({
@@ -27,20 +25,16 @@ const router = createRouter({
       component: HelloWorld,
     },
     {
-      path: '/women',
-      name: 'women',
-      component: Women,
-    },
-    {
-      path: '/men',
-      name: 'men',
-      component: Men,
+      path: '/',
+      name: 'hello',
+      component: HelloWorld,
     },
     {
       path: '/category',
       name: 'category',
       component: Category,
     },
+
     // {
     //     path:'/login',
     //     name:'login',

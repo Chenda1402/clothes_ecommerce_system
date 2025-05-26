@@ -84,7 +84,7 @@
         class="vector-parent absolute top-0 left-0 bottom-0 right-0 m-auto w-[1514px] max-w-full h-[2949.5px] text-neutral-white"
       >
         <img
-          class="group-child absolute top-0 left-0 w-full h-full"
+          class="group-child absolute top-0 left-0 w-full h-[2400px]"
           alt=""
           src="/images/vector-41.png"
         />
@@ -92,64 +92,32 @@
         <div
           class="fashion-type-parent absolute top-[777.5px] left-[calc(50%-506px)] w-[1014px] h-[789px] text-white"
         >
-          <b class="fashion-type absolute top-0 left-[calc(50%-87px)] underline"
-            >FASHION TYPE</b
-          >
-          <!-- <div
-            class="group-item absolute top-[46px] left-[calc(50%-67px)] border-t-2 border-neutral-white box-border w-[136px] h-px"
-          ></div> -->
-          <img
-            class="group-inner absolute top-[110px] left-0 rounded-xs w-[483px] h-[576px] overflow-hidden object-cover"
-            alt=""
-            src="/images/frame-79.png"
-          />
-          <img
-            class="frame-icon absolute top-[110px] left-[531px] rounded-xs w-[483px] h-[576px] overflow-hidden object-cover"
-            alt=""
-            src="/images/frame-1171276670.png"
-          />
-          <div
-            @click="handleCollectionClick('Women')"
-            class="women-collection-wrapper absolute top-[722px] left-0 box-border w-[483px] flex flex-row items-center justify-center p-[var(--padding-xs)] cursor-pointer"
-          >
-            <button
-              type="button"
-              class="hover:text-white border text-center border-white bg-white hover:bg-gray-200 w-[483px] focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center me-2 mb-2 dark:border-gray-200 dark:text-gray-500 dark:hover:text-white dark:hover:bg-gray-200 dark:focus:ring-gray-300"
+          <div class="fashion-type-parent container mx-auto text-center">
+            <b class="fashion-type text-3xl md:text-4xl font-bold text-white"
+              >FASHION TYPE</b
             >
-              <ul
-                class="flex flex-col p-4 md:p-0 mt-4 text-center font-medium border md:space-x-8 rtl:space-x-reverse md:flex-row md:mt-0 md:border-0 text-gray-900 dark:bg-gray-800 md:dark:bg-gray-900 dark:border-gray-700"
+            <div class="group-item h-1 w-24 bg-pink-500 mx-auto my-6"></div>
+            <!-- group-inner and frame-icon are decorative images, style as needed -->
+            <!-- <img class="group-inner w-12 h-12 mx-auto mb-4" src="some-decorative-icon.svg" alt=""> -->
+            <div class="grid md:grid-cols-2 gap-8 mt-10">
+              <div
+                class="women-collection-wrapper bg-pink-100 p-8 rounded-lg shadow-lg hover:shadow-xl transition-shadow cursor-pointer transform hover:-translate-y-1"
               >
-                <li>
-                  <router-link
-                    to="/women"
-                    class="block py-2 px-3 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-gray-700 md:p-0 dark:text-white md:dark:hover:text-gray-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700"
-                    active-class="md:text-blue-700 md:dark:text-blue-500"
-                    >Women Collection</router-link
-                  >
-                </li>
-              </ul>
-            </button>
-          </div>
-          <div
-            @click="handleCollectionClick('Men')"
-            class="men-collection-wrapper absolute top-[722px] left-[531px] rounded-sm border-3 border-neutral-white box-border w-[483px] flex flex-row items-center justify-center p-[var(--padding-xs)] cursor-pointer"
-          >
-            <button
-              class="women-collection relative underline bg-transparent border-none text-inherit cursor-pointer"
-            >
-              <ul
-                class="flex flex-col p-4 md:p-0 mt-4 font-medium border border-gray-100 rounded-lg bg-gray-50 md:space-x-8 rtl:space-x-reverse md:flex-row md:mt-0 md:border-0 md:bg-white dark:bg-gray-800 md:dark:bg-gray-900 dark:border-gray-700"
+                <router-link
+                  to="/category"
+                  class="women-collection text-2xl font-semibold text-pink-700"
+                  >Women Collection</router-link
+                >
+              </div>
+              <div
+                class="men-collection-wrapper bg-blue-100 p-8 rounded-lg shadow-lg hover:shadow-xl transition-shadow cursor-pointer transform hover:-translate-y-1"
+                @click="openMenu"
               >
-                <li>
-                  <router-link
-                    to="/men"
-                    class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700"
-                    active-class="md:text-blue-700 md:dark:text-blue-500"
-                    >Men Collection</router-link
-                  >
-                </li>
-              </ul>
-            </button>
+                <b class="women-collection text-2xl font-semibold text-blue-700"
+                  >Men Collection</b
+                >
+              </div>
+            </div>
           </div>
         </div>
       </div>
@@ -246,7 +214,7 @@
 
       <!-- Footer -->
       <div
-        class="footer absolute top-[3326px] left-0 bg-[rgba(96,28,49,0.1)] w-[1512px] h-[289px] flex flex-row items-start justify-start flex-wrap content-start p-[44px_var(--padding-base)] box-border gap-[15px_162px] text-[var(--web-paragraph-size)]"
+        class="footer absolute top-[2756px] left-0 bg-[rgba(96,28,49,0.1)] w-[1512px] h-[289px] flex flex-row items-start justify-start flex-wrap content-start p-[44px_var(--padding-base)] box-border gap-[15px_162px] text-[var(--web-paragraph-size)]"
       >
         <div class="follow-us-parent w-[105px] relative h-[164px]">
           <div
@@ -420,11 +388,11 @@
 
       <!-- Line Group / Top Products Section -->
       <div
-        class="line-group absolute top-[1994px] left-[calc(50%-741px)] w-[1480px] h-[1288px] text-primary-dark"
+        class="line-group absolute top-[1394px] left-[calc(50%-741px)] w-[1480px] h-[1288px] text-white"
       >
         <!-- Removed extra text-white class -->
         <b
-          class="top-products absolute top-0 left-[calc(50%-89px)] underline text-neutral-white"
+          class="top-products absolute top-0 left-[calc(50%-89px)] underline text-neutral-white text-2xl"
           >TOP PRODUCTS</b
         >
         <!-- Repeat Product Items -->

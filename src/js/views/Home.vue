@@ -428,16 +428,27 @@
   <!-- End of .page-center-wrapper -->
 
   <!-- Menu Popup -->
-  <div
+   <div
     v-if="isMenuOpen"
     @click="closeMenuOverlay"
     class="popup-overlay fixed top-0 left-0 w-full h-full bg-[rgba(113,113,113,0.3)] flex items-start justify-start z-[1000]"
   >
     <div
       @click.stop
-      class="menu relative w-[233px] bg-white h-screen overflow-y-auto text-left text-[var(--web-h3-title-size)] font-kantumruy p-5 box-border shadow-lg"
+      class="menu relative w-[233px] bg-white h-screen overflow-y-auto text-left text-black font-kantumruy p-5 box-border shadow-lg"
     >
-      <b class="women2 block mb-4 underline">Women</b>
+      <ul
+        class="flex flex-col p-4 md:p-0 mt-4 text-center font-medium border md:space-x-8 rtl:space-x-reverse md:flex-row md:mt-0 md:border-0 text-gray-900 dark:bg-gray-800 md:dark:bg-gray-900 dark:border-gray-700"
+      >
+        <li>
+          <router-link
+            to="/category"
+            class="block py-2 px-3 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-gray-700 md:p-0 dark:text-white md:dark:hover:text-gray-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700"
+            active-class="md:text-blue-700 md:dark:text-blue-500"
+            >Women Collection</router-link
+          >
+        </li>
+      </ul>
       <div class="menu1 block mb-5 text-[var(--web-h4-subtitle-size)]">
         Menu
       </div>
@@ -451,10 +462,11 @@
         @click="closeMenu"
         class="vector-icon absolute top-4 right-4 w-6 h-6 max-w-full overflow-hidden max-h-full cursor-pointer"
         alt="Close Menu"
-        src="/src/assets/images/mingcute-menu-fill.svg"
+        src="/images/mingcute-menu-fill.svg"
       />
     </div>
   </div>
+
 </template>
 
 <script setup>

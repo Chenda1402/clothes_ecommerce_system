@@ -33,7 +33,7 @@
           <img
             class="hugeiconstrade-up w-8 relative h-8 overflow-hidden flex-shrink-0"
             alt=""
-            src="/src/assets/images/hugeicons-trade-up.svg "
+            src="/images/hugeicons-trade-up.svg"
           />
         </div>
         <div
@@ -51,7 +51,7 @@
         <img
           class="poster-child absolute top-[210.37px] left-[250.9px] w-[46px] h-[42px] object-contain"
           alt=""
-          src="/src/assets/frame-79 copy.png"
+          src="/images/frame-79.png"
         />
         <div
           class="poster-item absolute top-[224.37px] left-[265.9px] shadow-lg rounded-sm bg-[#858484] border-2 border-[#d1d1d1] box-border w-[624px] h-[585px]"
@@ -60,22 +60,22 @@
         <img
           class="portrait-young-woman-wearing-2-icon absolute top-[32.37px] left-[348.9px] rounded-sm w-[624px] h-[673px] object-cover"
           alt=""
-          src="/src/assets/images/portrait-young-woman-wearing-2000-s-fashion-style-1.png"
+          src="/images/portrait-young-woman-wearing-2000-s-fashion-style-1.png"
         />
         <img
           class="portrait-young-woman-wearing-2-icon1 absolute top-[485.37px] left-[208.9px] rounded-sm w-[374px] h-[443px] object-cover"
           alt=""
-          src="/src/assets/images/portrait-young-woman-wearing-2000-s-fashion-style.png"
+          src="/images/portrait-young-woman-wearing-2000-s-fashion-style.png"
         />
         <img
           class="poster-inner absolute top-[731.13px] left-0 w-[279.9px] h-[256.5px] object-contain"
           alt=""
-          src="/src/assets/images/group-1171276595.svg"
+          src="/images/group-1171276595.svg"
         />
         <img
           class="group-icon absolute top-0 left-[922.67px] w-[197.3px] h-[158.6px] object-contain"
           alt=""
-          src="/src/assets/images/group-1171276596.svg"
+          src="/images/group-1171276596.svg"
         />
       </div>
 
@@ -84,55 +84,40 @@
         class="vector-parent absolute top-0 left-0 bottom-0 right-0 m-auto w-[1514px] max-w-full h-[2949.5px] text-neutral-white"
       >
         <img
-          class="group-child absolute top-0 left-0 w-full h-full"
+          class="group-child absolute top-0 left-0 w-full h-[2400px]"
           alt=""
-          src="/src/assets/images/vector-41.png"
+          src="/images/vector-41.png"
         />
         <!-- Fashion Type Content (Relative to vector-parent) -->
         <div
           class="fashion-type-parent absolute top-[777.5px] left-[calc(50%-506px)] w-[1014px] h-[789px] text-white"
         >
-          <b class="fashion-type absolute top-0 left-[calc(50%-87px)] underline"
-            >FASHION TYPE</b
-          >
-          <!-- <div
-            class="group-item absolute top-[46px] left-[calc(50%-67px)] border-t-2 border-neutral-white box-border w-[136px] h-px"
-          ></div> -->
-          <img
-            class="group-inner absolute top-[110px] left-0 rounded-xs w-[483px] h-[576px] overflow-hidden object-cover"
-            alt=""
-            src="/src/assets/images/frame-79.png"
-          />
-          <img
-            class="frame-icon absolute top-[110px] left-[531px] rounded-xs w-[483px] h-[576px] overflow-hidden object-cover"
-            alt=""
-            src="/src/assets/images/frame-1171276670.png"
-          />
-          <div
-            @click="handleCollectionClick('Women')"
-            class="women-collection-wrapper absolute top-[722px] left-0 rounded-sm border-3 border-neutral-white box-border w-[483px] flex flex-row items-center justify-center p-[var(--padding-xs)] cursor-pointer"
-          >
-            <button
-              type="button"
-              class="text-white bg-gray-800 hover:bg-gray-900 focus:outline-none focus:ring-4 focus:ring-gray-300 font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2 dark:bg-gray-800 dark:hover:bg-gray-700 dark:focus:ring-gray-700 dark:border-gray-700"
+          <div class="fashion-type-parent container mx-auto text-center">
+            <b class="fashion-type text-3xl md:text-4xl font-bold text-white"
+              >FASHION TYPE</b
             >
-              Women Collection
-            </button>
-            <!-- <button
-              class="women-collection relative underline bg-transparent border-none text-inherit cursor-pointer"
-            >
-              
-            </button> -->
-          </div>
-          <div
-            @click="handleCollectionClick('Men')"
-            class="men-collection-wrapper absolute top-[722px] left-[531px] rounded-sm border-3 border-neutral-white box-border w-[483px] flex flex-row items-center justify-center p-[var(--padding-xs)] cursor-pointer"
-          >
-            <button
-              class="women-collection relative underline bg-transparent border-none text-inherit cursor-pointer"
-            >
-              Men Collection
-            </button>
+            <div class="group-item h-1 w-24 bg-pink-500 mx-auto my-6"></div>
+            <!-- group-inner and frame-icon are decorative images, style as needed -->
+            <!-- <img class="group-inner w-12 h-12 mx-auto mb-4" src="some-decorative-icon.svg" alt=""> -->
+            <div class="grid md:grid-cols-2 gap-8 mt-10">
+              <div
+                class="women-collection-wrapper bg-pink-100 p-8 rounded-lg shadow-lg hover:shadow-xl transition-shadow cursor-pointer transform hover:-translate-y-1"
+              >
+                <router-link
+                  to="/category"
+                  class="women-collection text-2xl font-semibold text-pink-700"
+                  >Women Collection</router-link
+                >
+              </div>
+              <div
+                class="men-collection-wrapper bg-blue-100 p-8 rounded-lg shadow-lg hover:shadow-xl transition-shadow cursor-pointer transform hover:-translate-y-1"
+                @click="openMenu"
+              >
+                <b class="women-collection text-2xl font-semibold text-blue-700"
+                  >Men Collection</b
+                >
+              </div>
+            </div>
           </div>
         </div>
       </div>
@@ -146,6 +131,7 @@
         <div
           class="frame-parent absolute top-[25px] left-0 w-full box-border flex flex-row items-center justify-between px-[var(--padding-base)]"
         >
+          <!-- Left: Menu Icon -->
           <div
             @click="openMenu"
             class="mingcutemenu-fill-wrapper flex flex-row items-center justify-start cursor-pointer"
@@ -153,57 +139,73 @@
             <img
               class="mingcutemenu-fill-icon w-6 relative h-6 overflow-hidden flex-shrink-0"
               alt="Open Menu"
-              src="/src/assets/images/mingcute-menu-fill.svg"
+              src="/images/mingcute-menu-fill.svg"
             />
           </div>
+
+          <!-- Center: Brand Name -->
           <div
-            class="sn w-[1045px] relative text-3xl font-mervale-script text-center inline-block flex-shrink-0"
+            class="sn w-auto relative text-3xl font-mervale-script text-center text-pink-800 inline-block flex-shrink-0 px-4"
           >
-            SN
+            Clothes Shop
           </div>
-          <div
-            class="frame-group rounded-sm flex flex-col items-start justify-start p-[var(--padding-xs)] gap-1 max-h-[50px]"
-          >
+
+          <!-- Right Side Container (for search, icons, login) -->
+          <div class="flex flex-row items-center gap-[var(--gap-base)]">
+            <!-- Search Input Section - ADDED BACK -->
             <div
-              class="material-symbols-lightsearch-parent h-6 flex flex-row items-center justify-start gap-[19px]"
+              class="frame-group rounded-sm flex flex-col items-start justify-start p-[var(--padding-xs)] gap-1 max-h-[50px]"
             >
-              <!-- CORRECTED: Comment moved OUTSIDE the img tag -->
-              <!-- Class name still seems wrong here, was likely search icon -->
-              <img
-                class="hugeiconstrade-up w-8 relative h-8 overflow-hidden flex-shrink-0"
-                alt="Search Icon"
-                src="/src/assets/images/material-symbols-light-search.svg"
-              />
-              <div class="search relative">search</div>
+              <div
+                class="material-symbols-lightsearch-parent h-6 flex flex-row items-center justify-start gap-2"
+              >
+                <img
+                  class="mingcutemenu-fill-icon w-6 relative h-6 overflow-hidden flex-shrink-0 cursor-pointer"
+                  alt="Search Icon"
+                  src="/images/material-symbols-light-search.svg"
+                />
+                <!-- Actual Input -->
+                <input
+                  type="text"
+                  placeholder="Search..."
+                  class="search-input bg-transparent border-none focus:outline-none focus:ring-0 p-0 text-inherit placeholder:text-gray-500 text-sm"
+                  style="width: 120px"
+                />
+              </div>
+              <div
+                class="frame-child w-full relative border-t border-gray-400 box-border h-px"
+              ></div>
             </div>
-            <div
-              class="frame-child w-[153px] relative border-t border-black box-border h-px"
-            ></div>
-          </div>
-          <div
-            class="mingcutemenu-fill-wrapper flex flex-row items-center justify-start"
-          >
+            <!-- End of Search Input Section -->
+
             <!-- Notification Icon -->
-            <img
-              class="mingcutemenu-fill-icon w-6 relative h-6 overflow-hidden flex-shrink-0"
-              alt="Notifications"
-              src="/src/assets/images/clarity-notification-line.svg"
-            />
-          </div>
-          <div
-            class="bar-menu-parent flex flex-row items-center justify-start gap-[var(--gap-base)]"
-          >
             <div
-              class="bar-menu rounded-sm flex flex-row items-center justify-center p-1"
+              class="mingcutemenu-fill-wrapper flex flex-row items-center justify-start cursor-pointer"
             >
-              <div class="search relative">Register</div>
+              <img
+                class="mingcutemenu-fill-icon w-6 relative h-6 overflow-hidden flex-shrink-0"
+                alt="Notifications"
+                src="/images/clarity-notification-line.svg"
+              />
             </div>
+
+            <!-- Register/Login Buttons -->
             <div
-              class="bar-menu rounded-sm flex flex-row items-center justify-center p-1"
+              class="bar-menu-parent flex flex-row items-center justify-start gap-2"
             >
-              <div class="search relative">Login</div>
+              <div
+                class="bar-menu rounded-sm flex flex-row items-center justify-center p-1 cursor-pointer hover:bg-gray-100"
+              >
+                <div class="search relative text-sm">Register</div>
+              </div>
+              <div
+                class="bar-menu rounded-sm flex flex-row items-center justify-center p-1 cursor-pointer hover:bg-gray-100"
+              >
+                <div class="search relative text-sm">Login</div>
+              </div>
             </div>
           </div>
+          <!-- End of Right Side Container -->
         </div>
         <div
           class="header-bar-child absolute top-0 left-0 bg-primary-dark w-full h-[17px]"
@@ -212,7 +214,7 @@
 
       <!-- Footer -->
       <div
-        class="footer absolute top-[3326px] left-0 bg-[rgba(96,28,49,0.1)] w-[1512px] h-[289px] flex flex-row items-start justify-start flex-wrap content-start p-[44px_var(--padding-base)] box-border gap-[15px_162px] text-[var(--web-paragraph-size)]"
+        class="footer absolute top-[2756px] left-0 bg-[rgba(96,28,49,0.1)] w-[1512px] h-[289px] flex flex-row items-start justify-start flex-wrap content-start p-[44px_var(--padding-base)] box-border gap-[15px_162px] text-[var(--web-paragraph-size)]"
       >
         <div class="follow-us-parent w-[105px] relative h-[164px]">
           <div
@@ -226,7 +228,7 @@
             <img
               class="mingcutemenu-fill-icon w-6 relative h-6 overflow-hidden flex-shrink-0"
               alt=""
-              src="/src/assets/images/ic-baseline-facebook.svg"
+              src="/images/ic-baseline-facebook.svg"
             />
             <div class="search relative">Facebook</div>
           </div>
@@ -236,7 +238,7 @@
             <img
               class="mingcutemenu-fill-icon w-6 relative h-6 overflow-hidden flex-shrink-0"
               alt=""
-              src="/src/assets/images/ri-instagram-fill.svg"
+              src="/images/ri-instagram-fill.svg"
             />
             <div class="search relative">Instagram</div>
           </div>
@@ -246,7 +248,7 @@
             <img
               class="mingcutemenu-fill-icon w-6 relative h-6 overflow-hidden flex-shrink-0"
               alt=""
-              src="/src/assets/images/ic-round-tiktok.svg"
+              src="/images/ic-round-tiktok.svg"
             />
             <div class="search relative">Tik Tok</div>
           </div>
@@ -256,7 +258,7 @@
             <img
               class="mingcutemenu-fill-icon w-6 relative h-6 overflow-hidden flex-shrink-0"
               alt=""
-              src="/src/assets/images/mingcute-youtube-fill.svg"
+              src="/images/mingcute-youtube-fill.svg"
             />
             <div class="search relative">Youtube</div>
           </div>
@@ -273,7 +275,7 @@
             <img
               class="mingcutemenu-fill-icon w-6 relative h-6 overflow-hidden flex-shrink-0"
               alt=""
-              src="/src/assets/images/ic-baseline-privacy-tip.svg"
+              src="/images/ic-baseline-privacy-tip.svg"
             />
             <div class="search relative">Privacy Policy</div>
           </div>
@@ -283,7 +285,7 @@
             <img
               class="mingcutemenu-fill-icon w-6 relative h-6 overflow-hidden flex-shrink-0"
               alt=""
-              src="/src/assets/images/ph-question-fill.svg"
+              src="/images/ph-question-fill.svg"
             />
             <div class="search relative">Online exchange policy</div>
           </div>
@@ -300,7 +302,7 @@
             <img
               class="mingcutemenu-fill-icon w-6 relative h-6 overflow-hidden flex-shrink-0"
               alt=""
-              src="/src/assets/images/material-symbols-mail.svg"
+              src="/images/material-symbols-mail.svg"
             />
             <div class="search relative">infome@gmail.com</div>
           </div>
@@ -310,18 +312,17 @@
             <img
               class="mingcutemenu-fill-icon w-6 relative h-6 overflow-hidden flex-shrink-0"
               alt=""
-              src="/src/assets/images/material-symbols-call-sharp.svg"
+              src="/images/material-symbols-call-sharp.svg"
             />
             <div class="search relative">(+855) 016 356624</div>
           </div>
           <div
             class="tik-tok absolute top-[103px] left-0 flex flex-row items-center justify-start gap-[var(--gap-5xs)]"
           >
-            <!-- Reused class? -->
             <img
               class="mingcutemenu-fill-icon w-6 relative h-6 overflow-hidden flex-shrink-0"
               alt=""
-              src="/src/assets/images/material-symbols-call-sharp.svg"
+              src="/images/material-symbols-call-sharp.svg"
             />
             <div class="search relative">(+855) 016 356624</div>
           </div>
@@ -331,7 +332,7 @@
             <img
               class="mingcutemenu-fill-icon w-6 relative h-6 overflow-hidden flex-shrink-0"
               alt=""
-              src="/src/assets/images/ic-baseline-telegram.svg"
+              src="/images/ic-baseline-telegram.svg"
             />
             <div class="search relative">@vann_norey</div>
           </div>
@@ -343,17 +344,17 @@
           <img
             class="rectangle-icon absolute top-[39px] left-0 rounded-xs w-[109px] h-[54px] object-cover"
             alt=""
-            src="/src/assets/images/rectangle-71.png"
+            src="/images/rectangle-71.png"
           />
           <img
             class="group-child1 absolute top-[39px] left-[125px] rounded-xs w-[109px] h-[54px] object-cover"
             alt=""
-            src="/src/assets/images/rectangle-72.png"
+            src="/images/rectangle-72.png"
           />
           <img
             class="group-child2 absolute top-[39px] left-[250px] rounded-xs w-[109px] h-[54px] object-cover"
             alt=""
-            src="/src/assets/images/rectangle-73.png"
+            src="/images/rectangle-73.png"
           />
           <div
             class="mdicash-on-delivery-parent absolute top-[109px] left-0 flex flex-row items-center justify-start gap-[var(--gap-base)] text-[var(--web-paragraph-size)]"
@@ -361,7 +362,7 @@
             <img
               class="mdicash-on-delivery-icon w-[34px] relative h-[34px] overflow-hidden flex-shrink-0"
               alt=""
-              src="/src/assets/images/mdi-cash-on-delivery.svg"
+              src="/images/mdi-cash-on-delivery.svg"
             />
             <div class="search relative">Cash on delivery</div>
           </div>
@@ -373,7 +374,7 @@
           <img
             class="teenyiconssend-up-outline absolute h-1/2 w-[2.3%] top-0 right-[2.3%] bottom-1/2 left-[95.4%] max-w-full overflow-hidden max-h-full"
             alt=""
-            src="/src/assets/images/teenyicons-send-up-outline.svg"
+            src="/images/teenyicons-send-up-outline.svg"
           />
         </div>
       </div>
@@ -387,10 +388,11 @@
 
       <!-- Line Group / Top Products Section -->
       <div
-        class="line-group absolute top-[1994px] left-[calc(50%-741px)] w-[1480px] h-[1288px] text-primary-dark"
+        class="line-group absolute top-[1394px] left-[calc(50%-741px)] w-[1480px] h-[1288px] text-white"
       >
+        <!-- Removed extra text-white class -->
         <b
-          class="top-products absolute top-0 left-[calc(50%-89px)] underline text-neutral-white text-white"
+          class="top-products absolute top-0 left-[calc(50%-89px)] underline text-neutral-white text-2xl"
           >TOP PRODUCTS</b
         >
         <!-- Repeat Product Items -->
@@ -401,7 +403,7 @@
             <img
               class="frame-item absolute top-0 left-0 rounded-xs w-[358px] h-[461px] object-cover"
               alt=""
-              src="/src/assets/images/frame-79.png"
+              src="/images/frame-79.png"
             />
           </div>
           <div
@@ -414,7 +416,7 @@
               IN STOCK
             </div>
             <div
-              class="knitting-button-short self-stretch relative text-[var(--web-description-size)] font-light overflow-hidden text-ellipsis whitespace-nowrap"
+              class="knitting-button-short self-stretch relative font-light text-black overflow-hidden text-ellipsis whitespace-nowrap"
             >
               Knitting Button Short Tops Tees Patchwork Y2k Shirt Clothing Women
               Pullovers Jumper Striped Sweater Fungus Blouse For Girls
@@ -428,7 +430,7 @@
   <!-- End of .page-center-wrapper -->
 
   <!-- Menu Popup -->
-   <div
+  <div
     v-if="isMenuOpen"
     @click="closeMenuOverlay"
     class="popup-overlay fixed top-0 left-0 w-full h-full bg-[rgba(113,113,113,0.3)] flex items-start justify-start z-[1000]"
@@ -466,7 +468,6 @@
       />
     </div>
   </div>
-
 </template>
 
 <script setup>

@@ -24,17 +24,16 @@ const router = createRouter({
       name: 'hello',
       component: HelloWorld,
     },
-      {
+    {
       path: '/',
       name: 'hello',
       component: HelloWorld,
     },
-       {
+    {
       path: '/category',
       name: 'category',
       component: Category,
     },
-    
 
     // {
     //     path:'/login',

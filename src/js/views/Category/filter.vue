@@ -44,7 +44,7 @@
 
     <b class="filter2">Filter</b>
     <div class="filter-item"></div>
-    <img class="vector-icon" src="Vector.svg" @click="onPopupClick" />
+    <img class="vector-icon" src="" @click="onPopupClick" />
 
     <div class="clear">
       <div class="one-size">CLEAR</div>
